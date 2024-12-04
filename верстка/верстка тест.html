@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.features-section h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700; /* Полужирный */
+}
+
+.feature-item h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700; /* Полужирный */
+}
+
+.feature-item p {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400; /* Обычный */
+}
+
+.features-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-item {
+    background: #9863ee;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.teachers-section {
+  background-color: #f9f9f9; /* Светло-зеленый фон */
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.teacher-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  padding-bottom: 20px;
+}
+
+.teacher-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.teacher-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  color: #000;
+}
+
+.teacher-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin: 0 15px;
+}
+
+.teachers-grid-prog {
+    display: flex;
+    gap: 40px;
+}
+
+.teachers-grid-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-item-block {
+    height: 70%;
+}
+
+.application-section {
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.application-container {
+  background-color: #fff;
+  color: #5a2a8c; /* Темно-фиолетовый текст */
+  padding: 30px 50px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.application-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.application-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.application-form .form-group {
+  margin-bottom: 15px;
+}
+
+.application-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #5a2a8c;
+}
+
+.application-form input,
+.application-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.application-form input:focus,
+.application-form select:focus {
+  outline: none;
+  border-color: #9c46a5;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+.checkbox-group a {
+  color: #9c46a5;
+  text-decoration: underline;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #5a2a8c;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #792b7a;
+}
+
+.messenger-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.messenger-links p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.messengers a {
+  margin: 0 5px;
+}
+
+.messengers img {
+  height: 30px;
+}
+
+
+
+@media (max-width: 768px) {
+  .feature-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-item {
+    flex: 1 1 100%;
+  }
+}
+
+    </style>
+    <section class="features-section">
+        <h2>Приглашаем на День открытых дверей!</h2>
+        <div style="font-size: 25px;margin-bottom: 40px;"><span>22 декабря – ОЧНО в 11:00 <br> На Дне открытых дверей Вы узнаете:</span></div>
+        <div class="features-container">
+          <div class="feature-item">
+            <h3>Об условиях поступления в колледж</h3>
+            
+          </div>
+          <div class="feature-item">
+            <h3>О том, как строится эффективный учебный процесс в Академическом колледже</h3>
+          </div>
+          <div class="feature-item">
+            <h3>О перспективах наших студентов и выпускников</h3>
+          </div>
+          <div class="feature-item">
+            <h3>Об актуальных и востребованных профессиях на рынке труда</h3>
+          </div>
+          <div class="feature-item">
+            <h3>О работодателях</h3>
+          </div>
+          <div class="feature-item">
+            <h3>О дополнительном образовании в колледже</h3>
+          </div>
+        </div>
+      </section>
+      <section class="teachers-section">
+        <div class="container">
+          <h2 class="section-title">Наши преподаватели</h2>
+          <div class="teachers-grid">
+            <div class="teacher-card">
+              <img src="f:\загрузки\верстка\igolkin.jpg" alt="Преподаватель" class="teacher-photo">
+              <h3 class="teacher-name">Иголкин Сергей Леонидович</h3>
+              <p class="teacher-title">Ректор, Доцент, Кандидат экономических наук</p>
+            </div>
+            <div class="teacher-card">
+              <img src="f:\загрузки\верстка\klevtsova.jpg" alt="Преподаватель" class="teacher-photo">
+              <h3 class="teacher-name">Клевцова Наталия Александровна</h3>
+              <p class="teacher-title">Старший преподаватель</p>
+            </div>
+            <div class="teacher-card">
+              <img src="f:\загрузки\верстка\poluhina.jpg" alt="Преподаватель" class="teacher-photo">
+              <h3 class="teacher-name">Полухина Ольга Петровна</h3>
+              <p class="teacher-title">Кандидат педагогических наук</p>
+            </div>
+            <div class="teacher-card">
+              <img src="f:\загрузки\верстка\shmoylova.jpg" alt="Преподаватель" class="teacher-photo">
+              <h3 class="teacher-name">Шмойлова Анна Ивановна</h3>
+              <p class="teacher-title">Старший преподаватель</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="teachers-section">
+        <div class="container">
+          <h2 class="section-title">Программа:</h2>
+          <div class="teachers-grid-wrapper">
+              <div class="teachers-grid-prog">
+                <div class="feature-item feature-item-block">
+                    <h3>11:00 Презентация для родителей: «Знакомство с колледжем», консультация представителей приемной комиссии об условиях поступления в 2024-2025 году.</h3>
+                </div>
+                <div class="feature-item feature-item-block">
+                <h3>11:00 Мастер-классы по специальностям для абитуриентов</h3>
+                </div>
+              </div>
+              <div>
+                
+                    <iframe
+                    width="720"
+                    height="405"
+                    src="https://rutube.ru/play/embed/d6e431f36f8a275e92f41632e198d597"
+                    frameBorder="0"
+                    allow="clipboard-write; autoplay"
+                    webkitAllowFullScreen
+                    mozallowfullscreen
+                    allowFullScreen
+                    ></iframe>
+      
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="application-section">
+        <div class="application-container">
+          <h2 class="application-title">Заявка</h2>
+          <p class="application-subtitle">
+            Для посещения Дня открытых дверей заполните форму заявки.
+          </p>
+          <form class="application-form">
+            <div class="form-group">
+              <label for="applicant-type">Вы родитель или абитуриент?</label>
+              <select id="applicant-type" name="applicant-type">
+                <option value="" disabled selected>Вы родитель или абитуриент?</option>
+                <option value="parent">Родитель</option>
+                <option value="applicant">Абитуриент</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fio">ФИО:</label>
+              <input type="text" id="fio" name="fio" placeholder="Введите ФИО" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон:</label>
+              <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Введите email" required>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="agreement" name="agreement" required>
+              <label for="agreement">
+                Согласен(-на) на обработку персональных данных, 
+                <a href="#">политикой конфиденциальности</a>, 
+                <a href="#">политикой в отношении обработки персональных данных</a>
+              </label>
+            </div>
+            <button type="submit" class="submit-button">ОТПРАВИТЬ</button>
+          </form>
+          <div class="messenger-links">
+            <p>Или напишите нам в мессенджеры:</p>
+            <div class="messengers">
+              <a href="#"><img src="f:\загрузки\верстка\телега_1711971983493-1711971987606.png" alt="Telegram"></a>
+              <a href="#"><img src="f:\загрузки\верстка\Screenshot 2023-01-27 at 09.57.28.jpg" alt="VK"></a>
+              <a href="#"><img src="f:\загрузки\верстка\whatsapp.png" alt="WhatsApp"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+</body>
+</html>
