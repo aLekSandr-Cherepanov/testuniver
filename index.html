@@ -242,6 +242,10 @@
   height: 30px;
 }
 
+        .wrapper-frame {
+            width: 30%;
+        }
+
 
 
 @media (max-width: 768px) {
@@ -252,6 +256,9 @@
     flex-direction: column;
     gap: 50px;
   }
+    .wrapper-frame {
+            width: 100%;
+        }
 
 }
 
@@ -259,6 +266,10 @@
   .feature-item {
     flex: 1 1 100%;
   }
+    .teachers-grid-prog {
+        flex-direction: column;
+    align-items: center;
+    }
 }
 
     </style>
@@ -326,7 +337,7 @@
                 <h3>11:00 Мастер-классы по специальностям для абитуриентов</h3>
                 </div>
               </div>
-              <div>
+              <div class="wrapper-frame">
                 
                     <iframe
                     width="100%"
